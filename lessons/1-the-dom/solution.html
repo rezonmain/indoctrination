@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 The DOM</title>
+</head>
+<body>
+  <div id="color-div" style="width: 300px; height: 300px; border: 1px solid black"></div>
+  <label>
+    Color:
+    <input type="color" name="color">
+  </label>
+  <button name="color-button">Set color</button>
+</body>
+<script>
+  const colorDiv = document.getElementById('color-div');
+  const colorInput = document.querySelector('input[type="color"]');
+  const colorButton = document.querySelector('button[name="color-button"]');
+
+  colorButton.addEventListener('click', () => {
+    colorDiv.style.backgroundColor = colorInput.value;
+  });
+</script>
+</html>
